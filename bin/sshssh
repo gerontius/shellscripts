@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /Users/ed/shellScripts/config.cfg
+source /Users/ed/projects/shellScripts/config.cfg
 
 #bpmgt="ubuntu@ec2-18-130-163-183.eu-west-2.compute.amazonaws.com"
 #ect='ecttrave@ecttravel.com\ -p18765'
@@ -13,8 +13,9 @@ source /Users/ed/shellScripts/config.cfg
 select server in "${SERVERS[@]}"
 do
   cd /Users/ed/.ssh
-  ssh-add -K private_ect sja_private bpmgttinamou.pem
+  ssh-add -K private_ect sja_private bpmgttinamou.pem awsbpmgt
   $server
+  break;
 done
 
 #for server in "${SERVERS[@]}"

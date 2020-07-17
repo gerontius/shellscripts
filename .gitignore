@@ -1,3 +1,10 @@
 # gitignore paths and files
-
+bin/cmdlinevar.sh
 config.cfg
+bin/cdfunction.sh
+bin/delimiter
+bin/errors.sh
+bin/functions
+bin/pipedlim.txt
+bin/spacedlim.txt
+bin/substitution.sh

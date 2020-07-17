@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+source /Users/ed/projects/shellScripts/config.cfg
+
+select scpcopy in "${SCPCOPIES[@]}"
+do
+  cd /Users/ed/.ssh
+  ssh-add -K private_ect sja_private bpmgttinamou.pem awsbpmgt
+  $scpcopy
+  break;
+done
+
+select changedir in "${CHANGEDIRS[@]}"
+do
+  $changedir
+  docker exec -i bpmgtmysql mysql -u root -psupport123 drupal8 < bpmgtlatest.sql
+  break;
+done
