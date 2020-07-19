@@ -15,6 +15,6 @@ done
 select changedir in "${CHANGEDIRS[@]}"
 do
   $changedir
-  docker exec -i bpmgtmysql mysql -u root -psupport123 drupal8 < bpmgtlatest.sql
+ # docker exec -i bpmgtmysql mysql -u root -psupport123 drupal8 < bpmgtlatest.sql
   break;
 done

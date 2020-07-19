@@ -13,7 +13,7 @@ source /Users/ed/projects/shellScripts/config.cfg
 select server in "${SERVERS[@]}"
 do
   cd /Users/ed/.ssh
-  ssh-add -K private_ect sja_private bpmgttinamou.pem awsbpmgt
+  ssh-add -K private_ect sja_private bpmgttinamou.pem awsbpmgt id_rsa
   $server
   break;
 done
