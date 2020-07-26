@@ -8,3 +8,5 @@ bin/functions
 bin/pipedlim.txt
 bin/spacedlim.txt
 bin/substitution.sh
+test.sh
+vars.sh
